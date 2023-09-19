@@ -8,6 +8,14 @@
     letter-spacing: 2px;
 }
 
+.js-conteudo section{
+    display: none;
+}
+
+.js-conteudo section.active{
+    
+}
+
 .maindiv{
     display: inline-flex;
     margin-left: 340px;
