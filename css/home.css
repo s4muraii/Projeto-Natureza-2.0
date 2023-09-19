@@ -8,13 +8,6 @@
     letter-spacing: 2px;
 }
 
-.js-conteudo section{
-    display: none;
-}
-
-.js-conteudo section.active{
-    
-}
 
 .maindiv{
     display: inline-flex;
@@ -68,4 +61,12 @@
     font-size: 18px;
     line-height: 32px;
     max-width: 852px;
+}
+
+.js-content section{
+    display: none;
+}
+
+.js-content section.active{
+    display: block;
 }
