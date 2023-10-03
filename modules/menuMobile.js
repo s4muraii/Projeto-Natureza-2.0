@@ -1,4 +1,5 @@
-const toggle = document.querySelector('.toggle');
+export default function menuMobileInit(){
+    const toggle = document.querySelector('.toggle');
 const menuList = document.querySelector('.js-list');
 
 if (toggle && menuList) {
@@ -10,4 +11,5 @@ if (toggle && menuList) {
     }
 
     toggle.addEventListener('click', toggleMenu);
+}
 }
