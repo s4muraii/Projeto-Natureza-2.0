@@ -38,10 +38,6 @@
     width: 300px;
 }
 
-#mainsection-alig{
-    display: inline-flex;
-}
-
 .mainsection{
     display: flex;
     max-width: 852px;
@@ -71,68 +67,48 @@
     display: block;
 }
 
-.toggle {
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #494949;
-    padding: 0.625rem;
-    border-radius: 5px;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    display: none;
-}
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
 
-@media screen and (max-width: 768px) {
-    .toggle {
+    .navbar js-list{
+        height: 50vh;
+        width: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        margin-right: 50px;
+    }
+
+    .maindiv{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .mainsection{
+        margin-top: 18px;
+        margin-left: 40px;
+        width: 320px;
+    }
+
+    .navbar{
+        margin-left: 40px;
+        width: 300px;
+        height: 40vh;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
         display: flex;
     }
-
-		.js-list{
-        display: none;
+    
+    .title{
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 0.5rem;
     }
 
-    .menu{
-        display:none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .js-list{
-        display: none;
-        animation: fadeOut .3s forwards;
-    }
-
-    .toggle{
-        display: flex;
-    }
-
-
-    .js-list.active{
-        display: block;
-        position: absolute;
-        top: 69px;
-        left: 0;
-        width: 100%;
-        background-color: var(--background-green);
-        z-index: 100;
-        animation: slideDownMenu .5s forwards;
-    }
-
-    .toggle span.active{
-        animation: slideDownMenu .5s forwards;
-    }
-
-}
-
-@keyframes slideDownMenu {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
