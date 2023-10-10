@@ -112,3 +112,34 @@
     }
 
 }
+
+@media screen and (max-width: 990px){
+    .maindiv{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        align-items: center;
+    }
+
+    .mainsection{
+        margin-top: 18px;
+        margin-left: 40px;
+        width: 90%;
+    }
+
+    .navbar{
+        margin-left: 40px;
+        width: 90%;
+        height: 40vh;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+        display: flex;
+    }
+    
+    .title{
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+}
