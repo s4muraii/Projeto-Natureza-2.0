@@ -1,5 +1,5 @@
 export default function initModal(){
-    const form = document.querySelector('modal-forms')
+    const form = document.querySelector('js-modal form')
     const dados = {}
 
     function pegarValorForm(event){
