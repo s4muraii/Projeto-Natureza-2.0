@@ -25,6 +25,7 @@
 @media screen and (max-width: 768px) {
     .contato{
         margin-left: 0px;
+        margin-top: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
