@@ -18,7 +18,7 @@
     display: flex;
 }
 
-#contato-list-itens{
+.contato-list-itens{
     padding: 50px;
 }
 
@@ -42,7 +42,7 @@
         max-width: 700px;
     }
 
-    #contato-list-itens{
+    .contato-list-itens{
         padding: 20px;
     }
 
