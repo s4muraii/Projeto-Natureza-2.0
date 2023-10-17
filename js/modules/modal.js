@@ -1,22 +1,36 @@
-export default function initModal(){
-    const form = document.querySelector("js-modal form")
-    const dados = {}
+export default function modal() {
 
-    function pegarValorForm(event){
-        dados[event.target.name] = event.target.value
-        console.log(dados)
-        ativarConteudo(indice)
+    const modal = document.querySelector(".js-modal");
+
+    const dados = {};
+
+    if (localStorage.getItem("email") === null) {
+        modal.classList.add("active");
+    } else {
+        modal.classList.remove("active");
     }
-    form.addEventListener('change', pegarValorForm)
 
-    localStorage.setItem('nome', 'Rafael')
-    const nome = localStorage.getItem('nome')
-    console.log(nome)
+    function pegarValorForm(event) {
+        dados[event.target.name] = event.target.value;
+        console.log(dados);
+    }
 
-    function ativarConteudo (indice){
-        form.forEach((item) => {
-            item.classList.remove('active')
-        })
-        form[indice].classList.add('active')
+    modal.addEventListener('change', pegarValorForm);
+
+    document.querySelector(".modal-forms").addEventListener("submit", (event) => {
+        event.preventDefault();
+        localStorage.setItem("email", JSON.stringify(dados.email));
+        alert("Dados salvos com sucesso");
+        modal.classList.remove("active");
+    });
+
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    if (localStorage.getItem("email") === null) {
+        setTimeout(() => {
+            modal.classList.add("active");
+        }, 3000);
     }
 }
